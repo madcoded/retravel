@@ -1,0 +1,45 @@
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__b-margin-until-medium {
+    margin-bottom: 1rem;
+  }
+
+  /* @mixin clearfix; */
+
+  @mixin atMedium {
+    & {
+      flex-direction: row;
+    }
+
+    &__b-margin-until-medium {
+      margin-bottom: 0;
+    }
+
+    &__medium-4 {
+      width: 33.33%;
+      base: 33.33%;
+    }
+
+    &__medium-8 {
+      width: 66.66%;
+      base: 66.66%;
+    }
+
+    &__medium-4--larger {
+      width: 37%;
+      flex-basis: 37%;
+      align-self: start;
+    }
+
+    &__medium-8--smaller {
+      width: 63%;
+      flex-basis: 63%;
+      align-self: start;
+      padding-left: 1em;
+    }
+  }
+}
