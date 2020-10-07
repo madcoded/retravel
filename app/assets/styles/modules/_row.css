@@ -8,11 +8,28 @@
     margin-bottom: 1rem;
   }
 
+  &--gutters {
+    margin-right: -65px;
+  }
+
+  &--gutters > div {
+    padding-right: 65px;
+  }
+
+  &--gutters-large {
+    margin-right: -100px;
+  }
+
+  &--gutters-large > div {
+    padding-right: 100px;
+  }
+
   /* @mixin clearfix; */
 
   @mixin atMedium {
     & {
       flex-direction: row;
+      flex-wrap: wrap;
     }
 
     &__b-margin-until-medium {
@@ -22,6 +39,11 @@
     &__medium-4 {
       width: 33.33%;
       base: 33.33%;
+    }
+
+    &__medium-6 {
+      width: 50%;
+      base: 50%;
     }
 
     &__medium-8 {
