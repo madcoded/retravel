@@ -1,9 +1,9 @@
 .primary-nav {
   padding-top: 10px;
 
-  /* @mixin atMedium {
+  @mixin atMedium {
     padding-top: 0;
-  } */
+  }
 
   &--pull-right {
     @mixin atMedium {
@@ -36,12 +36,22 @@
   }
 
   a {
-    color: #ffffff;
-    text-decoration: none;
+    color: #fff;
     font-weight: 300;
-  }
+    text-decoration: none;
+    display: block;
+    padding: 5px 8px;
+    font-size: 0.8rem;
+    background-color: rgba($mainBlue, 0.5);
 
-  a:hover {
-    color: $mainOrange;
+    @mixin atMedium {
+      font-size: 1rem;
+      padding: 12px 0;
+      background-color: transparent;
+
+      &.is-current-link {
+        color: #fabb69;
+      }
+    }
   }
 }
